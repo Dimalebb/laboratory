@@ -44,3 +44,5 @@ try:
     print("SpeechRecognition готовий до роботи.")
 except Exception as e:
     print("Помилка з SpeechRecognition:", e)
+if __name__ == "__main__":
+    main()
