@@ -1,0 +1,71 @@
+2025-11-26 10:26:31,095 | INFO | root | Starting bot...
+2025-11-26 12:43:34,441 | INFO | handlers.start | Start handlers registered
+2025-11-26 12:43:34,442 | INFO | handlers.chat | Chat handlers registered
+2025-11-26 12:43:34,442 | INFO | root | Bot started
+2025-11-26 12:46:04,716 | INFO | business.gpt_service | Cache miss — sending to OpenAI
+2025-11-26 12:46:07,007 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-26 12:46:07,641 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-26 12:46:10,019 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-26 12:46:10,020 | ERROR | business.gpt_service | OpenAI error
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\PythonProject\laba 8\business\gpt_service.py", line 26, in ask_gpt_with_cache
+    response = await client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\User\PycharmProjects\PythonProject\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2603, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<48 lines>...
+    )
+    ^
+  File "C:\Users\User\PycharmProjects\PythonProject\.venv\Lib\site-packages\openai\_base_client.py", line 1794, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\PycharmProjects\PythonProject\.venv\Lib\site-packages\openai\_base_client.py", line 1594, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-11-26 12:47:29,648 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-26 12:47:29,649 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8212426461)
+2025-11-26 12:47:32,959 | INFO | handlers.start | Start handlers registered
+2025-11-26 12:47:32,960 | INFO | handlers.chat | Chat handlers registered
+2025-11-26 12:47:32,960 | INFO | root | Bot started
+2025-11-26 12:48:04,864 | INFO | business.gpt_service | Cache miss — sending to OpenAI
+2025-11-26 12:48:06,103 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-26 12:48:07,203 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-26 12:48:08,977 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-26 12:48:08,978 | ERROR | business.gpt_service | OpenAI error
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\PythonProject\laba 8\business\gpt_service.py", line 26, in ask_gpt_with_cache
+    response = await client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\User\PycharmProjects\PythonProject\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2603, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<48 lines>...
+    )
+    ^
+  File "C:\Users\User\PycharmProjects\PythonProject\.venv\Lib\site-packages\openai\_base_client.py", line 1794, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\PycharmProjects\PythonProject\.venv\Lib\site-packages\openai\_base_client.py", line 1594, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-11-26 12:51:29,526 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-26 12:51:29,526 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8212426461)
+2025-11-26 12:51:32,846 | INFO | handlers.start | Start handlers registered
+2025-11-26 12:51:32,846 | INFO | handlers.chat | Chat handlers registered
+2025-11-26 12:51:32,846 | INFO | root | Bot started
+2025-11-26 12:51:49,258 | INFO | business.gpt_service | Cache miss — sending to OpenAI
+2025-11-26 12:51:50,692 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 12:51:58,350 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-26 12:51:58,350 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8212426461)
+2025-11-26 12:54:30,270 | INFO | handlers.start | Start handlers registered
+2025-11-26 12:54:30,270 | INFO | handlers.chat | Chat handlers registered
+2025-11-26 12:54:30,270 | INFO | root | Bot started
+2025-11-26 12:58:44,742 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-11-26 12:58:44,742 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8212426461)
