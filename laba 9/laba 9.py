@@ -5,7 +5,6 @@ def find_letter_pairs(line):
     words = re.findall(r'\b[^\W_]+\b', line.lower(), flags=re.UNICODE)
 
     for i, word in enumerate(words):
-        # Беремо пари всередині слова
         for j in range(len(word) - 1):
             pairs.append(word[j:j+2])
 
@@ -35,4 +34,5 @@ def main():
         print(f"Файл '{filename}' не знайдено. Поклади laba_9.txt в ту ж папку, де скрипт.")
 
 if __name__ == "__main__":
+
     main()
