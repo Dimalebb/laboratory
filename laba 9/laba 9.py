@@ -14,7 +14,6 @@ def generate_pairs(line):
                 if word and next_word:
                     yield word[-1] + next_word[0]
 
-
 def get_unique_first_three(generator):
     seen = []
     for pair in generator:
@@ -35,11 +34,8 @@ def main():
                 if not line:
                     print(f"Рядок {idx}: (пустий)")
                     continue
-
                 gen = generate_pairs(line)
-
                 first_three = get_unique_first_three(gen)
-
                 print(f"Рядок {idx}: {first_three}")
 
     except FileNotFoundError:
@@ -48,3 +44,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
