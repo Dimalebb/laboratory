@@ -39,9 +39,10 @@ def main():
                 print(f"Рядок {idx}: {first_three}")
 
     except FileNotFoundError:
-        print(f"Файл '{filename}' не знайдено! Поклади file.txt у ту ж папку.")
+        print(f"Файл '{filename}' не знайдено! Поклади laba_9.txt у ту ж папку.")
 
 
 if __name__ == "__main__":
     main()
+
 
