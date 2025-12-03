@@ -1,19 +1,29 @@
 import re
 
-def find_letter_pairs(line):
-    pairs = []
+def generate_pairs(line):
     words = re.findall(r'\b[^\W_]+\b', line.lower(), flags=re.UNICODE)
 
     for i, word in enumerate(words):
+
         for j in range(len(word) - 1):
-            pairs.append(word[j:j+2])
+            yield word[j:j+2]
 
         if i < len(words) - 1:
-            if not (word.endswith('у') and words[i+1].startswith('н')):
-                if word and words[i+1]:
-                    pairs.append(word[-1] + words[i+1][0])
+            next_word = words[i + 1]
+            if not (word.endswith('у') and next_word.startswith('н')):
+                if word and next_word:
+                    yield word[-1] + next_word[0]
 
-    return pairs
+
+def get_unique_first_three(generator):
+    seen = []
+    for pair in generator:
+        if pair not in seen:
+            seen.append(pair)
+        if len(seen) == 3:
+            break
+    return seen
+
 
 def main():
     filename = "laba_9.txt"
@@ -26,13 +36,15 @@ def main():
                     print(f"Рядок {idx}: (пустий)")
                     continue
 
-                pairs = find_letter_pairs(line)
-                unique_pairs = list(dict.fromkeys(pairs))
-                selected_pairs = unique_pairs[:3]
-                print(f"Рядок {idx}: {selected_pairs}")
+                gen = generate_pairs(line)
+
+                first_three = get_unique_first_three(gen)
+
+                print(f"Рядок {idx}: {first_three}")
+
     except FileNotFoundError:
-        print(f"Файл '{filename}' не знайдено. Поклади laba_9.txt в ту ж папку, де скрипт.")
+        print(f"Файл '{filename}' не знайдено! Поклади file.txt у ту ж папку.")
+
 
 if __name__ == "__main__":
-
     main()
